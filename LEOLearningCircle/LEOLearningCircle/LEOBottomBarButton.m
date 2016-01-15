@@ -12,7 +12,7 @@
 
 
 
-- (void)setSelected:(BOOL)selected{
+- (void)setHighlighted:(BOOL)highlighted{
     
 }
 /*
