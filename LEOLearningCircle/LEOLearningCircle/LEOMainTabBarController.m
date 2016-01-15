@@ -7,7 +7,7 @@
 //
 
 #import "LEOMainTabBarController.h"
-
+#import "LEOBottomView.h"
 @interface LEOMainTabBarController ()
 
 @end
@@ -15,9 +15,30 @@
 @implementation LEOMainTabBarController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
+    [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeViewControllerWith:) name:@"didBtn" object:nil];
+    [self loadBottomView];
+    
+}
+- (void)changeViewControllerWith:(NSNotification*)notify{
+    
+    self.selectedIndex = [notify.object intValue];
+}
+
+- (void)loadBottomView{
+    
+    LEOBottomView *bottomBar = [[LEOBottomView alloc]init];
+    for (int i=0; i<4; i++) {
+        NSString *normal = [NSString stringWithFormat:@"TabBar%d",i+1];
+        NSString *selected = [NSString stringWithFormat:@"TabBar%d_sel",i+1];
+        [bottomBar addBottomBarButtonWithImage:normal selected:selected];
+    }
+    bottomBar.frame = self.tabBar.frame;
+//    [self.tabBar addSubview:bottomBar];
+    
+    
+    [self.view addSubview:bottomBar];
     
 }
 
