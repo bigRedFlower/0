@@ -56,6 +56,9 @@
 		3A92F38E1C49478F00328E36 /* LEOMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92F38C1C49478F00328E36 /* LEOMainTabBarController.m */; };
 		3A92F3981C4952DE00328E36 /* LEOBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92F3971C4952DE00328E36 /* LEOBottomView.m */; };
 		3A9431201C4955BA00EBE4AD /* LEOBottomBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A94311F1C4955BA00EBE4AD /* LEOBottomBarButton.m */; };
+		467521AF1C4BD36900362E8A /* GDAnswerNVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521AE1C4BD36900362E8A /* GDAnswerNVController.m */; };
+		467521B21C4BD3A100362E8A /* GDStudentMainTController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521B11C4BD3A100362E8A /* GDStudentMainTController.m */; };
+		467521B51C4BD3C700362E8A /* GDTeacherMainTController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521B41C4BD3C700362E8A /* GDTeacherMainTController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +121,12 @@
 		3A92F3971C4952DE00328E36 /* LEOBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOBottomView.m; sourceTree = "<group>"; };
 		3A94311E1C4955BA00EBE4AD /* LEOBottomBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOBottomBarButton.h; sourceTree = "<group>"; };
 		3A94311F1C4955BA00EBE4AD /* LEOBottomBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOBottomBarButton.m; sourceTree = "<group>"; };
+		467521AD1C4BD36900362E8A /* GDAnswerNVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAnswerNVController.h; path = ../GDAnswerNVController.h; sourceTree = "<group>"; };
+		467521AE1C4BD36900362E8A /* GDAnswerNVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAnswerNVController.m; path = ../GDAnswerNVController.m; sourceTree = "<group>"; };
+		467521B01C4BD3A100362E8A /* GDStudentMainTController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDStudentMainTController.h; sourceTree = "<group>"; };
+		467521B11C4BD3A100362E8A /* GDStudentMainTController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDStudentMainTController.m; sourceTree = "<group>"; };
+		467521B31C4BD3C700362E8A /* GDTeacherMainTController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTeacherMainTController.h; sourceTree = "<group>"; };
+		467521B41C4BD3C700362E8A /* GDTeacherMainTController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDTeacherMainTController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +276,7 @@
 		3A92F38F1C49484500328E36 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				467521A61C4BD25B00362E8A /* AnswerNow(即时答) */,
 				0A0A15B21C4BC14100B7158A /* 我(me) */,
 				3A92F3941C494F8C00328E36 /* 伙伴圈(friends) */,
 				3A92F3901C49485B00328E36 /* 主框架 */,
@@ -330,6 +340,51 @@
 			children = (
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		467521A61C4BD25B00362E8A /* AnswerNow(即时答) */ = {
+			isa = PBXGroup;
+			children = (
+				467521AA1C4BD29E00362E8A /* otheres */,
+				467521A91C4BD29600362E8A /* contorlleres */,
+				467521A81C4BD28D00362E8A /* viewes */,
+				467521A71C4BD28100362E8A /* modeles */,
+			);
+			name = "AnswerNow(即时答)";
+			sourceTree = "<group>";
+		};
+		467521A71C4BD28100362E8A /* modeles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = modeles;
+			sourceTree = "<group>";
+		};
+		467521A81C4BD28D00362E8A /* viewes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = viewes;
+			sourceTree = "<group>";
+		};
+		467521A91C4BD29600362E8A /* contorlleres */ = {
+			isa = PBXGroup;
+			children = (
+				467521AD1C4BD36900362E8A /* GDAnswerNVController.h */,
+				467521AE1C4BD36900362E8A /* GDAnswerNVController.m */,
+				467521B01C4BD3A100362E8A /* GDStudentMainTController.h */,
+				467521B11C4BD3A100362E8A /* GDStudentMainTController.m */,
+				467521B31C4BD3C700362E8A /* GDTeacherMainTController.h */,
+				467521B41C4BD3C700362E8A /* GDTeacherMainTController.m */,
+			);
+			name = contorlleres;
+			sourceTree = "<group>";
+		};
+		467521AA1C4BD29E00362E8A /* otheres */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = otheres;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,12 +495,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				467521B21C4BD3A100362E8A /* GDStudentMainTController.m in Sources */,
+				467521B51C4BD3C700362E8A /* GDTeacherMainTController.m in Sources */,
 				3A92F3771C49470000328E36 /* AppDelegate.m in Sources */,
 				3A92F3741C49470000328E36 /* main.m in Sources */,
 				0A0A15BC1C4BC18300B7158A /* LEOMeController.m in Sources */,
 				3A92F38E1C49478F00328E36 /* LEOMainTabBarController.m in Sources */,
 				0A0A15BA1C4BC18300B7158A /* LEOMe.m in Sources */,
 				0A0A15BD1C4BC18300B7158A /* LEOMeNavController.m in Sources */,
+				467521AF1C4BD36900362E8A /* GDAnswerNVController.m in Sources */,
 				3A9431201C4955BA00EBE4AD /* LEOBottomBarButton.m in Sources */,
 				3A92F3981C4952DE00328E36 /* LEOBottomView.m in Sources */,
 				3A92F38D1C49478F00328E36 /* LEOMainNavController.m in Sources */,

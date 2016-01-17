@@ -8,6 +8,7 @@
 
 #import "LEOMainTabBarController.h"
 #import "LEOBottomView.h"
+#import "GDAnswerNVController.h"
 
 
 #import "LEOMeController.h"
@@ -54,7 +55,9 @@
     LEOMeController *me = [[LEOMeController alloc]init];
     UINavigationController *navMe = [[UINavigationController alloc]initWithRootViewController:me];
     
-    self.viewControllers = @[navMe,navMe,navMe,navMe];
+    GDAnswerNVController * answerNowNc = [[GDAnswerNVController alloc]init];
+    
+    self.viewControllers = @[navMe,navMe,answerNowNc,navMe];
 }
 
 - (void)didReceiveMemoryWarning {
