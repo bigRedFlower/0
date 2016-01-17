@@ -13,6 +13,7 @@
 
 #import "LEOFriendsController.h"
 #import "LEOMeController.h"
+#import "GDMainStudentController.h"
 @interface LEOMainTabBarController ()
 
 @end
@@ -30,6 +31,8 @@
     
     LEOFriendsController *friend = [[LEOFriendsController alloc]init];
     [self addOneChindVc:friend title:@"伙伴圈" imageNamed:@"TabBar1" selectedImage:@"TabBar1_sel"];
+    GDMainStudentController *stu = [[GDMainStudentController alloc]init];
+    [self addOneChindVc:stu title:@"即时答" imageNamed:@"TabBar2" selectedImage:@"TabBar2_sel"];
     LEOMeController *me = [[LEOMeController alloc]init];
     [self addOneChindVc:me title:@"我" imageNamed:@"TabBar4" selectedImage:@"TabBar4_sel"];
     
