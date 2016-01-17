@@ -10,6 +10,7 @@
 //导航控制器
 #import "LEOMainNavController.h"
 #import "LEOFriendsNavController.h"
+#import "GDMainNController.h"
 
 #import "LEOFriendsController.h"
 #import "LEOMeController.h"
@@ -59,8 +60,10 @@
     
     LEOMeController *me = [[LEOMeController alloc]init];
     UINavigationController *navMe = [[UINavigationController alloc]initWithRootViewController:me];
+    
+    GDMainNController * answerNow = [[GDMainNController alloc]init];
 
-    self.viewControllers = @[navMe,navMe,navMe,navMe];
+    self.viewControllers = @[navMe,navMe,answerNow,navMe];
 }
 
 - (void)didReceiveMemoryWarning {
