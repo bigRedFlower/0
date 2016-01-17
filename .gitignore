@@ -1,4 +1,1 @@
-*.o,*.lo,*.la,*.al,.libs,*.so,*.so.[0-9]*,*.a,*.pyc,*.pyo,__pycache__,*.rej,*~,#*#,.#*,.*.swp,.DS_Store,*.pbxuser,*.mode1v3,*.mode2v3,*.perspectivev3,xcuserdata,*.xccheckout,*.moved-aside,*.xcuserstate,*.xcscmblueprint,*.hmap,*.ipa
-LEOLearningCircle/LEOLearningCircle.xcodeproj/project.xcworkspace/xcuserdata/zz.xcuserdatad/UserInterfaceState.xcuserstate
-
-*.xcuserstate
+*.o,*.lo,*.la,*.al,.libs,*.so,*.so.[0-9]*,*.a,*.pyc,*.pyo,__pycache__,*.rej,*~,#*#,.#*,.*.swp,.DS_Store,*.pbxuser,*.mode1v3,*.mode2v3,*.perspectivev3,xcuserdata,*.xccheckout,*.moved-aside,*.xcuserstate,*.xcscmblueprint,*.hmap,*.ipa*.xcuserstate
