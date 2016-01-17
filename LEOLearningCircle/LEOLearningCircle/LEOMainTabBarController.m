@@ -7,19 +7,9 @@
 //
 
 #import "LEOMainTabBarController.h"
-<<<<<<< HEAD
-#import "LEOBottomView.h"
-<<<<<<< HEAD
-<<<<<<< HEAD
-#import "GDAnswerNVController.h"
-=======
->>>>>>> origin/master
-=======
->>>>>>> parent of fbc9d55... 增加了我的界面
-=======
->>>>>>> parent of fbc9d55... 增加了我的界面
-
+//导航控制器
 #import "LEOMainNavController.h"
+#import "LEOFriendsNavController.h"
 
 #import "LEOFriendsController.h"
 #import "LEOMeController.h"
@@ -35,11 +25,11 @@
     [self addChildViewControllers];
     
 }
+//添加子控制器
 - (void)addChildViewControllers{
     
     LEOFriendsController *friend = [[LEOFriendsController alloc]init];
     [self addOneChindVc:friend title:@"伙伴圈" imageNamed:@"TabBar1" selectedImage:@"TabBar1_sel"];
-    
     LEOMeController *me = [[LEOMeController alloc]init];
     [self addOneChindVc:me title:@"我" imageNamed:@"TabBar4" selectedImage:@"TabBar4_sel"];
     
@@ -56,37 +46,28 @@
     selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     childVc.tabBarItem.selectedImage = selectedImage;
     
-<<<<<<< HEAD
-<<<<<<< HEAD
     LEOMainNavController *nav = [[LEOMainNavController alloc]initWithRootViewController:childVc];
     [self addChildViewController:nav];
     
-<<<<<<< HEAD
-    GDAnswerNVController * answerNowNc = [[GDAnswerNVController alloc]init];
-    
-    self.viewControllers = @[navMe,navMe,answerNowNc,navMe];
-=======
->>>>>>> origin/master
-=======
-    self.viewControllers = @[navMe,navMe,navMe,navMe];
->>>>>>> parent of fbc9d55... 增加了我的界面
-=======
-    self.viewControllers = @[navMe,navMe,navMe,navMe];
->>>>>>> parent of fbc9d55... 增加了我的界面
 }
+
+
+
+
+
+- (void)loadSubControllers {
+    
+    LEOMeController *me = [[LEOMeController alloc]init];
+    UINavigationController *navMe = [[UINavigationController alloc]initWithRootViewController:me];
+
+    self.viewControllers = @[navMe,navMe,navMe,navMe];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

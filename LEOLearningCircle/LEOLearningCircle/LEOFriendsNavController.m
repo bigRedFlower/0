@@ -7,7 +7,7 @@
 //
 
 #import "LEOFriendsNavController.h"
-
+#import "LEOFriendsController.h"
 @interface LEOFriendsNavController ()
 
 @end
