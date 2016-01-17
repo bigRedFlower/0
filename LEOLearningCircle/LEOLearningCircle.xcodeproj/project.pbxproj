@@ -168,7 +168,7 @@
 		3A92F38F1C49484500328E36 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				467521C11C4BEE1B00362E8A /* AnswerNow(我) */,
+				467521C11C4BEE1B00362E8A /* AnswerNow(即时答) */,
 				0A0A15B21C4BC14100B7158A /* 我(me) */,
 				3A92F3941C494F8C00328E36 /* 伙伴圈(friends) */,
 				3A92F3901C49485B00328E36 /* 主框架 */,
@@ -233,12 +233,12 @@
 			name = controllers;
 			sourceTree = "<group>";
 		};
-		467521C11C4BEE1B00362E8A /* AnswerNow(我) */ = {
+		467521C11C4BEE1B00362E8A /* AnswerNow(即时答) */ = {
 			isa = PBXGroup;
 			children = (
 				467521C21C4BEE3000362E8A /* Controlleres */,
 			);
-			name = "AnswerNow(我)";
+			name = "AnswerNow(即时答)";
 			sourceTree = "<group>";
 		};
 		467521C21C4BEE3000362E8A /* Controlleres */ = {

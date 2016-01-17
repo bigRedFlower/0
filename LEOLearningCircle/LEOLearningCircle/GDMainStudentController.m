@@ -10,17 +10,42 @@
 
 @interface GDMainStudentController ()
 
+@property (nonatomic,strong)UIButton * leftAnswerBtn;
+
+@property (nonatomic,strong)UIButton * rigthQuestionBtn;
+
+@property (nonatomic,strong)UIButton * voiceBtn;
+
+@property (nonatomic,strong)UIButton * photoesBtn;
+
+@property (nonatomic,strong)UIButton * textBtn;
+
+
+
+
 @end
 
 @implementation GDMainStudentController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    测试用
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"即时答背景"]];
-    self.title = nil;
+
     self.navigationController.navigationBarHidden = YES;
+
+//    self.hidesBottomBarWhenPushed  = YES;
+    
+    [self loadSubViews];
+    
+
+
 }
+
+-(void)loadSubViews{
+
+
+
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
