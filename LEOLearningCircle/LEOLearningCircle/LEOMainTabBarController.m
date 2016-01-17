@@ -7,9 +7,10 @@
 //
 
 #import "LEOMainTabBarController.h"
-#import "LEOBottomView.h"
 
+#import "LEOMainNavController.h"
 
+#import "LEOFriendsController.h"
 #import "LEOMeController.h"
 @interface LEOMainTabBarController ()
 
@@ -20,43 +21,34 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeViewControllerWith:) name:@"didBtn" object:nil];
-    [self loadBottomView];
-    
-    //载入控制器
-    [self loadSubControllers];
+    [self addChildViewControllers];
     
 }
-- (void)changeViewControllerWith:(NSNotification*)notify{
+- (void)addChildViewControllers{
     
-    self.selectedIndex = [notify.object intValue];
-}
-
-- (void)loadBottomView{
-    
-    LEOBottomView *bottomBar = [[LEOBottomView alloc]init];
-    for (int i=0; i<4; i++) {
-        NSString *normal = [NSString stringWithFormat:@"TabBar%d",i+1];
-        NSString *selected = [NSString stringWithFormat:@"TabBar%d_sel",i+1];
-        [bottomBar addBottomBarButtonWithImage:normal selected:selected];
-    }
-    bottomBar.frame = self.tabBar.frame;
-//    [self.tabBar addSubview:bottomBar];
-    
-    
-    [self.view addSubview:bottomBar];
-    
-}
-
-
-- (void)loadSubControllers {
+    LEOFriendsController *friend = [[LEOFriendsController alloc]init];
+    [self addOneChindVc:friend title:@"伙伴圈" imageNamed:@"TabBar1" selectedImage:@"TabBar1_sel"];
     
     LEOMeController *me = [[LEOMeController alloc]init];
-    UINavigationController *navMe = [[UINavigationController alloc]initWithRootViewController:me];
+    [self addOneChindVc:me title:@"我" imageNamed:@"TabBar4" selectedImage:@"TabBar4_sel"];
     
-    self.viewControllers = @[navMe,navMe,navMe,navMe];
+    
 }
 
+- (void)addOneChindVc:(UIViewController*)childVc title:(NSString*)title imageNamed:(NSString*)imageName selectedImage:(NSString*)selectedImageName{
+    
+    childVc.title = title;
+    
+    childVc.tabBarItem.image = [UIImage imageNamed:imageName];
+    
+    UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
+    selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    childVc.tabBarItem.selectedImage = selectedImage;
+    
+    LEOMainNavController *nav = [[LEOMainNavController alloc]initWithRootViewController:childVc];
+    [self addChildViewController:nav];
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
