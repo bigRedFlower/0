@@ -9,9 +9,12 @@
 #import "LEOMainTabBarController.h"
 <<<<<<< HEAD
 #import "LEOBottomView.h"
+<<<<<<< HEAD
 #import "GDAnswerNVController.h"
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> parent of fbc9d55... 增加了我的界面
 
 #import "LEOMainNavController.h"
 
@@ -50,6 +53,7 @@
     selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     childVc.tabBarItem.selectedImage = selectedImage;
     
+<<<<<<< HEAD
     LEOMainNavController *nav = [[LEOMainNavController alloc]initWithRootViewController:childVc];
     [self addChildViewController:nav];
     
@@ -59,6 +63,9 @@
     self.viewControllers = @[navMe,navMe,answerNowNc,navMe];
 =======
 >>>>>>> origin/master
+=======
+    self.viewControllers = @[navMe,navMe,navMe,navMe];
+>>>>>>> parent of fbc9d55... 增加了我的界面
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
