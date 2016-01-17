@@ -57,6 +57,7 @@
 		3A92F3981C4952DE00328E36 /* LEOBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92F3971C4952DE00328E36 /* LEOBottomView.m */; };
 		3A9431201C4955BA00EBE4AD /* LEOBottomBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A94311F1C4955BA00EBE4AD /* LEOBottomBarButton.m */; };
 <<<<<<< HEAD
+<<<<<<< HEAD
 		467521AF1C4BD36900362E8A /* GDAnswerNVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521AE1C4BD36900362E8A /* GDAnswerNVController.m */; };
 		467521B21C4BD3A100362E8A /* GDStudentMainTController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521B11C4BD3A100362E8A /* GDStudentMainTController.m */; };
 		467521B51C4BD3C700362E8A /* GDTeacherMainTController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521B41C4BD3C700362E8A /* GDTeacherMainTController.m */; };
@@ -64,6 +65,8 @@
 		3AC273D01C4BC9C3009B73C5 /* LEOFriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC273CF1C4BC9C3009B73C5 /* LEOFriendsController.m */; };
 		3AC273D31C4BCD29009B73C5 /* LEOFriendsNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC273D21C4BCD29009B73C5 /* LEOFriendsNavController.m */; };
 >>>>>>> origin/master
+=======
+>>>>>>> parent of fbc9d55... 增加了我的界面
 =======
 >>>>>>> parent of fbc9d55... 增加了我的界面
 /* End PBXBuildFile section */
@@ -129,6 +132,7 @@
 		3A94311E1C4955BA00EBE4AD /* LEOBottomBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOBottomBarButton.h; sourceTree = "<group>"; };
 		3A94311F1C4955BA00EBE4AD /* LEOBottomBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOBottomBarButton.m; sourceTree = "<group>"; };
 <<<<<<< HEAD
+<<<<<<< HEAD
 		467521AD1C4BD36900362E8A /* GDAnswerNVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDAnswerNVController.h; path = ../GDAnswerNVController.h; sourceTree = "<group>"; };
 		467521AE1C4BD36900362E8A /* GDAnswerNVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDAnswerNVController.m; path = ../GDAnswerNVController.m; sourceTree = "<group>"; };
 		467521B01C4BD3A100362E8A /* GDStudentMainTController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDStudentMainTController.h; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 		3AC273D11C4BCD29009B73C5 /* LEOFriendsNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOFriendsNavController.h; sourceTree = "<group>"; };
 		3AC273D21C4BCD29009B73C5 /* LEOFriendsNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOFriendsNavController.m; sourceTree = "<group>"; };
 >>>>>>> origin/master
+=======
+>>>>>>> parent of fbc9d55... 增加了我的界面
 =======
 >>>>>>> parent of fbc9d55... 增加了我的界面
 /* End PBXFileReference section */
@@ -465,12 +471,15 @@
 			files = (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				467521B21C4BD3A100362E8A /* GDStudentMainTController.m in Sources */,
 				467521B51C4BD3C700362E8A /* GDTeacherMainTController.m in Sources */,
 =======
 				3AC273D31C4BCD29009B73C5 /* LEOFriendsNavController.m in Sources */,
 				3AC273D01C4BC9C3009B73C5 /* LEOFriendsController.m in Sources */,
 >>>>>>> origin/master
+=======
+>>>>>>> parent of fbc9d55... 增加了我的界面
 =======
 >>>>>>> parent of fbc9d55... 增加了我的界面
 				3A92F3771C49470000328E36 /* AppDelegate.m in Sources */,
@@ -481,7 +490,10 @@
 				0A0A15BD1C4BC18300B7158A /* LEOMeNavController.m in Sources */,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 				467521AF1C4BD36900362E8A /* GDAnswerNVController.m in Sources */,
+=======
+>>>>>>> parent of fbc9d55... 增加了我的界面
 =======
 >>>>>>> parent of fbc9d55... 增加了我的界面
 				3A9431201C4955BA00EBE4AD /* LEOBottomBarButton.m in Sources */,
