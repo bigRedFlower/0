@@ -8,6 +8,9 @@
 
 #import "LEOMainTabBarController.h"
 #import "LEOBottomView.h"
+
+
+#import "LEOMeController.h"
 @interface LEOMainTabBarController ()
 
 @end
@@ -19,6 +22,9 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(changeViewControllerWith:) name:@"didBtn" object:nil];
     [self loadBottomView];
+    
+    //载入控制器
+    [self loadSubControllers];
     
 }
 - (void)changeViewControllerWith:(NSNotification*)notify{
@@ -40,6 +46,15 @@
     
     [self.view addSubview:bottomBar];
     
+}
+
+
+- (void)loadSubControllers {
+    
+    LEOMeController *me = [[LEOMeController alloc]init];
+    UINavigationController *navMe = [[UINavigationController alloc]initWithRootViewController:me];
+    
+    self.viewControllers = @[navMe,navMe,navMe,navMe];
 }
 
 - (void)didReceiveMemoryWarning {
