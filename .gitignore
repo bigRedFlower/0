@@ -1,3 +1,10 @@
+<<<<<<< HEAD
 *.o,*.lo,*.la,*.al,.libs,*.so,*.so.[0-9]*,*.a,*.pyc,*.pyo,__pycache__,*.rej,*~,#*#,.#*,.*.swp,.DS_Store,*.pbxuser,*.mode1v3,*.mode2v3,*.perspectivev3,xcuserdata,*.xccheckout,*.moved-aside,*.xcuserstate,*.xcscmblueprint,*.hmap,*.ipa*.xcuserstate
 
 LEOLearningCircle/LEOLearningCircle.xcodeproj/project.xcworkspace/xcuserdata/zz.xcuserdatad/UserInterfaceState.xcuserstate
+=======
+*.o,*.lo,*.la,*.al,.libs,*.so,*.so.[0-9]*,*.a,*.pyc,*.pyo,__pycache__,*.rej,*~,#*#,.#*,.*.swp,.DS_Store,*.pbxuser,*.mode1v3,*.mode2v3,*.perspectivev3,xcuserdata,*.xccheckout,*.moved-aside,*.xcuserstate,*.xcscmblueprint,*.hmap,*.ipa
+LEOLearningCircle/LEOLearningCircle.xcodeproj/project.xcworkspace/xcuserdata/zz.xcuserdatad/UserInterfaceState.xcuserstate
+
+*.xcuserstate
+>>>>>>> parent of 8669668... 忽略文件杂质
