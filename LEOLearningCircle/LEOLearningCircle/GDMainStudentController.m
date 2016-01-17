@@ -18,6 +18,8 @@
     [super viewDidLoad];
 //    测试用
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"即时答背景"]];
+    self.title = nil;
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)didReceiveMemoryWarning {
