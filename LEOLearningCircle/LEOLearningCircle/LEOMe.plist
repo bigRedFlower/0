@@ -6,31 +6,31 @@
 		<key>title</key>
 		<string>添加朋友</string>
 		<key>icon</key>
-		<string>4</string>
+		<string>me_4</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>通讯录</string>
 		<key>icon</key>
-		<string>5</string>
+		<string>me_5</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>我的钱包</string>
 		<key>icon</key>
-		<string>6</string>
+		<string>me_6</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>消息</string>
 		<key>icon</key>
-		<string>7</string>
+		<string>me_7</string>
 	</dict>
 	<dict>
 		<key>title</key>
 		<string>设置</string>
 		<key>icon</key>
-		<string>8</string>
+		<string>me_8</string>
 	</dict>
 </array>
 </plist>
