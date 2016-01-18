@@ -8,8 +8,12 @@
 
 #import "LEOFriendsController.h"
 
+#define LEOScreenW [UIScreen mainScreen].bounds.size.width
+#define LEOScreenH [UIScreen mainScreen].bounds.size.height
+#define LEOHeaderH 150
 @interface LEOFriendsController ()
 
+@property (nonatomic, strong) UIImageView *headerImgView;
 @end
 
 @implementation LEOFriendsController
@@ -17,11 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationController.navigationBarHidden = YES;
+    self.title = nil;
+    [self setBackGroundView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +32,19 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+//设置头部下拉视图
+- (void)setBackGroundView{
+    
+    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOHeaderH)];
+    headerView.contentMode = UIViewContentModeScaleAspectFill;
+    headerView.image = [UIImage imageNamed:@"friend_background"];
+    UIView *backGroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOScreenH)];
+    [backGroundView addSubview:headerView];
+    self.headerImgView = headerView;
+    self.tableView.backgroundView = backGroundView;
+    
+}
 
 
 #pragma mark - Table view data source
