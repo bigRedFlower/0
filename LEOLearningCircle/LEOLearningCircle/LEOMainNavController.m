@@ -24,6 +24,20 @@
     // Dispose of any resources that can be recreated.
 }
 
++(void)initialize{
+    
+    UINavigationBar *navBar = [UINavigationBar appearance];
+    navBar.barStyle = UIBarStyleBlack;
+    [navBar setTintColor:[UIColor whiteColor]];
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if (self.viewControllers.count > 0) {
+        viewController.hidesBottomBarWhenPushed = YES;
+        
+    }
+    [super pushViewController:viewController animated:YES];
+}
 /*
 #pragma mark - Navigation
 

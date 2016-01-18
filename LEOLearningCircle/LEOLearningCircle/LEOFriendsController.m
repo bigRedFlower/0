@@ -23,7 +23,6 @@
     
     
     self.navigationController.navigationBarHidden = YES;
-    self.title = nil;
     [self setBackGroundView];
 }
 
