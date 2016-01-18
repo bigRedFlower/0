@@ -21,15 +21,26 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    
     // Dispose of any resources that can be recreated.
 }
 
+- (void)setStatusBar:(UINavigationBar*)navBar{
+    
+}
 +(void)initialize{
     
     UINavigationBar *navBar = [UINavigationBar appearance];
-    navBar.barStyle = UIBarStyleBlack;
+//    navBar.barStyle = UIBarStyleBlack;
     [navBar setTintColor:[UIColor whiteColor]];
+//    UIImage *img = [UIImage imageNamed:@"friend_black"];
+//    img = [img stretchableImageWithLeftCapWidth:img.size.width * 0.5 topCapHeight:img.size.height * 0.5];
+//    [navBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
+    [navBar setBackgroundColor:[UIColor blackColor]];
+    [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
+
+
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (self.viewControllers.count > 0) {

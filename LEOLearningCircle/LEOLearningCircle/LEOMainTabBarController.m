@@ -26,6 +26,8 @@
     [self addChildViewControllers];
     
 }
+
+
 //添加子控制器
 - (void)addChildViewControllers{
     
@@ -51,20 +53,10 @@
     
     LEOMainNavController *nav = [[LEOMainNavController alloc]initWithRootViewController:childVc];
     [self addChildViewController:nav];
+  
     
 }
 
-
-
-
-
-- (void)loadSubControllers {
-    
-    LEOMeController *me = [[LEOMeController alloc]init];
-    UINavigationController *navMe = [[UINavigationController alloc]initWithRootViewController:me];
-
-    self.viewControllers = @[navMe,navMe,navMe,navMe];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
