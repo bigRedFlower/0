@@ -7,6 +7,8 @@
 //
 
 #import "GDMainStudentController.h"
+#import "GDVoiceMainVController.h"
+#import "GDTextMainVController.h"
 
 
 #define MainSize  [UIScreen mainScreen].bounds.size
@@ -36,16 +38,13 @@
 
     self.view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"now_16"].CGImage);
     
-    
-    
-    
-    self.navigationController.navigationBarHidden = YES;
+//    self.navigationController.navigationBarHidden = YES;
+
 
 //    self.hidesBottomBarWhenPushed  = YES;
-    
+
     [self loadSubViews];
     
-   
 
 }
 
@@ -55,9 +54,7 @@
 
 }
 -(void)loadSubViews{
-    
-    
-    
+
     UIImageView * headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0,MainSize.width ,200)];
     headImageView.image = [UIImage imageNamed:@"now_answerBackGround"];
     [self.view addSubview:headImageView];
@@ -71,7 +68,13 @@
     CGFloat photoImageW = photoesImage.size.width;
     CGFloat photoImageH = photoesImage.size.height;
     photoImageView.frame = CGRectMake(photoImageX,photoImageY,photoImageW,photoImageH);
-    
+   
+    UIButton * photoBtn = [self creatButtonWithImageView:photoImageView];
+    [photoBtn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
+    photoBtn.tag = 2;
+    [photoImageView addSubview:photoBtn];
+    photoImageView.userInteractionEnabled = YES;
+
     [self.view addSubview:photoImageView];
     
     //2.设置左边语音视图
@@ -83,6 +86,12 @@
     CGFloat voiceImageViewW = voiceImage.size.width;
     CGFloat voiceImageViewH = voiceImage.size.height;
     voiceImageView.frame = CGRectMake(voiceImageViewX,voiceImageViewY,voiceImageViewW, voiceImageViewH);
+    
+    UIButton * voiceBtn = [self creatButtonWithImageView:voiceImageView];
+    [voiceBtn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
+    voiceBtn.tag = 1;
+    [voiceImageView addSubview:voiceBtn];
+    voiceImageView.userInteractionEnabled = YES;
     
     [self.view addSubview:voiceImageView];
     
@@ -97,18 +106,46 @@
     CGFloat textImageViewH = textImage.size.height;
     textImageView.frame = CGRectMake(textImageViewX,textImageViewY,textImageViewW, textImageViewH);
     
+    UIButton * textBtn = [self creatButtonWithImageView:textImageView];
+    [textBtn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
+    textBtn.tag = 3;
+    [textImageView addSubview:textBtn];
+    textImageView.userInteractionEnabled = YES;
+    
     [self.view addSubview:textImageView];
 
     
-    
-    
-    
-    
+}
+
+
+-(void)didClickBtn:(UIButton*)btn{
+    if (btn.tag == 1) {
+        GDVoiceMainVController * voiceMainVc = [[GDVoiceMainVController alloc]init];
+        [self.navigationController pushViewController:voiceMainVc animated:YES];
+    }
+    if (btn.tag == 2) {
+        
+        
+    }
+    if (btn.tag == 3) {
+        GDTextMainVController * textMainVc = [[GDTextMainVController alloc]init];
+        [self.navigationController pushViewController:textMainVc animated:YES];
+    }
 
 
 
 }
 
+-(UIButton*)creatButtonWithImageView:(UIImageView*)imageView{
+    
+    CGFloat BtnW = CGRectGetWidth(imageView.frame);
+    CGFloat BtnH = BtnW*1.4;
+    CGFloat BtnY = imageView.bounds.size.height - BtnH;
+    UIButton * tmpBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, BtnY, BtnW, BtnH)];
+//    tmpBtn.backgroundColor = [UIColor redColor];
+//    tmpBtn.alpha = 0.2;
+    return tmpBtn;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
