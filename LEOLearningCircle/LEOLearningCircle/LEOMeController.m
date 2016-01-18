@@ -10,7 +10,7 @@
 #import "LEOMe.h"
 #import "LEOMeCell.h"
 #import "LEOMeCellFrame.h"
-
+#import "LEOMeHeadView.h"
 @interface LEOMeController ()
 
 @property (nonatomic ,strong)NSArray *meFrames;
@@ -43,8 +43,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBar.hidden = YES;
+    
     //去掉tableView的分割线
     self.tableView.separatorStyle = NO;
+    
+    LEOMeHeadView *headView = [[LEOMeHeadView alloc]initWithFrame:CGRectMake(0, 0, 375, 135)];
+
+    self.tableView.tableHeaderView = headView;
+ 
+    
+
     
 
 }
@@ -70,7 +79,6 @@
     LEOMeCellFrame *cellFrame = self.meFrames[indexPath.row];
     return cellFrame.cellHeight;
 }
-
 
 
 @end
