@@ -9,6 +9,7 @@
 #import "GDMainStudentController.h"
 #import "GDVoiceMainVController.h"
 #import "GDTextMainVController.h"
+#import "GDQutionListTController.h"
 
 
 #define MainSize  [UIScreen mainScreen].bounds.size
@@ -33,6 +34,19 @@
 
 @implementation GDMainStudentController
 
+-(void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -41,7 +55,7 @@
 //    self.navigationController.navigationBarHidden = YES;
 
 
-//    self.hidesBottomBarWhenPushed  = YES;
+//    self.hidesBottomBarWhenPushed  = NO;
 
     [self loadSubViews];
     
@@ -55,7 +69,7 @@
 }
 -(void)loadSubViews{
 
-    UIImageView * headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0,MainSize.width ,200)];
+    UIImageView * headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0,MainSize.width ,150)];
     headImageView.image = [UIImage imageNamed:@"now_answerBackGround"];
     [self.view addSubview:headImageView];
     
@@ -113,15 +127,33 @@
     textImageView.userInteractionEnabled = YES;
     
     [self.view addSubview:textImageView];
-
+    
+    //设置右侧问题列表控制器
+    UIButton * questionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage * btnImage = [UIImage imageNamed:@"now_2"];
+    [questionBtn setBackgroundImage:btnImage forState:UIControlStateNormal];
+    CGFloat btnY = CGRectGetMaxY(self.navigationController.navigationBar.frame) - btnImage.size.height;
+    questionBtn.frame = CGRectMake(MainSize.width-btnImage.size.width-Margin,btnY , btnImage.size.width, btnImage.size.height);
+    
+    [questionBtn addTarget:self action:@selector(clickQestionListBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:questionBtn];
     
 }
 
+
+-(void)clickQestionListBtn:(UIButton*)btn{
+
+    GDQutionListTController * questionListTC = [[GDQutionListTController alloc]init];
+    questionListTC.navigationItem.title = @"问题列表";
+    [self.navigationController pushViewController:questionListTC animated:YES];
+
+}
 
 -(void)didClickBtn:(UIButton*)btn{
     if (btn.tag == 1) {
         GDVoiceMainVController * voiceMainVc = [[GDVoiceMainVController alloc]init];
         [self.navigationController pushViewController:voiceMainVc animated:YES];
+       
     }
     if (btn.tag == 2) {
         

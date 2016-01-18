@@ -24,6 +24,9 @@
 		3AC273D31C4BCD29009B73C5 /* LEOFriendsNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC273D21C4BCD29009B73C5 /* LEOFriendsNavController.m */; };
 		4665B3C71C4CB5B100BCF634 /* GDVoiceMainVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665B3C61C4CB5B100BCF634 /* GDVoiceMainVController.m */; };
 		4665B3CA1C4CB5C300BCF634 /* GDTextMainVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665B3C91C4CB5C300BCF634 /* GDTextMainVController.m */; };
+		4665B3CD1C4D0E4800BCF634 /* GDVoiceDoneVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665B3CC1C4D0E4800BCF634 /* GDVoiceDoneVController.m */; };
+		4665B3D01C4D3EB300BCF634 /* GDQutionListTController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665B3CF1C4D3EB300BCF634 /* GDQutionListTController.m */; };
+		4665B3D41C4D400400BCF634 /* GDQuestionListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665B3D31C4D400400BCF634 /* GDQuestionListTableViewCell.m */; };
 		467521C91C4BEE6B00362E8A /* GDMainNController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521C41C4BEE6B00362E8A /* GDMainNController.m */; };
 		467521CA1C4BEE6B00362E8A /* GDMainStudentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521C61C4BEE6B00362E8A /* GDMainStudentController.m */; };
 		467521CB1C4BEE6B00362E8A /* GDMainTeacherVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521C81C4BEE6B00362E8A /* GDMainTeacherVController.m */; };
@@ -62,6 +65,12 @@
 		4665B3C61C4CB5B100BCF634 /* GDVoiceMainVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDVoiceMainVController.m; sourceTree = "<group>"; };
 		4665B3C81C4CB5C300BCF634 /* GDTextMainVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTextMainVController.h; sourceTree = "<group>"; };
 		4665B3C91C4CB5C300BCF634 /* GDTextMainVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDTextMainVController.m; sourceTree = "<group>"; };
+		4665B3CB1C4D0E4800BCF634 /* GDVoiceDoneVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDVoiceDoneVController.h; sourceTree = "<group>"; };
+		4665B3CC1C4D0E4800BCF634 /* GDVoiceDoneVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDVoiceDoneVController.m; sourceTree = "<group>"; };
+		4665B3CE1C4D3EB300BCF634 /* GDQutionListTController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDQutionListTController.h; sourceTree = "<group>"; };
+		4665B3CF1C4D3EB300BCF634 /* GDQutionListTController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDQutionListTController.m; sourceTree = "<group>"; };
+		4665B3D21C4D400400BCF634 /* GDQuestionListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDQuestionListTableViewCell.h; sourceTree = "<group>"; };
+		4665B3D31C4D400400BCF634 /* GDQuestionListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDQuestionListTableViewCell.m; sourceTree = "<group>"; };
 		467521C31C4BEE6B00362E8A /* GDMainNController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMainNController.h; sourceTree = "<group>"; };
 		467521C41C4BEE6B00362E8A /* GDMainNController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMainNController.m; sourceTree = "<group>"; };
 		467521C51C4BEE6B00362E8A /* GDMainStudentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMainStudentController.h; sourceTree = "<group>"; };
@@ -244,9 +253,19 @@
 			name = controllers;
 			sourceTree = "<group>";
 		};
+		4665B3D11C4D3FE500BCF634 /* viewes */ = {
+			isa = PBXGroup;
+			children = (
+				4665B3D21C4D400400BCF634 /* GDQuestionListTableViewCell.h */,
+				4665B3D31C4D400400BCF634 /* GDQuestionListTableViewCell.m */,
+			);
+			name = viewes;
+			sourceTree = "<group>";
+		};
 		467521C11C4BEE1B00362E8A /* AnswerNow(即时答) */ = {
 			isa = PBXGroup;
 			children = (
+				4665B3D11C4D3FE500BCF634 /* viewes */,
 				467521C21C4BEE3000362E8A /* Controlleres */,
 			);
 			name = "AnswerNow(即时答)";
@@ -265,6 +284,10 @@
 				4665B3C61C4CB5B100BCF634 /* GDVoiceMainVController.m */,
 				4665B3C81C4CB5C300BCF634 /* GDTextMainVController.h */,
 				4665B3C91C4CB5C300BCF634 /* GDTextMainVController.m */,
+				4665B3CB1C4D0E4800BCF634 /* GDVoiceDoneVController.h */,
+				4665B3CC1C4D0E4800BCF634 /* GDVoiceDoneVController.m */,
+				4665B3CE1C4D3EB300BCF634 /* GDQutionListTController.h */,
+				4665B3CF1C4D3EB300BCF634 /* GDQutionListTController.m */,
 			);
 			name = Controlleres;
 			sourceTree = "<group>";
@@ -342,9 +365,11 @@
 			files = (
 				3AC273D31C4BCD29009B73C5 /* LEOFriendsNavController.m in Sources */,
 				4665B3CA1C4CB5C300BCF634 /* GDTextMainVController.m in Sources */,
+				4665B3D01C4D3EB300BCF634 /* GDQutionListTController.m in Sources */,
 				0A0A161B1C4BE76300B7158A /* LEOMeCellFrame.m in Sources */,
 				3AC273D01C4BC9C3009B73C5 /* LEOFriendsController.m in Sources */,
 				0A0A167D1C4CB8CC00B7158A /* LEOMeHeadView.m in Sources */,
+				4665B3D41C4D400400BCF634 /* GDQuestionListTableViewCell.m in Sources */,
 				0A0A161E1C4BE77600B7158A /* LEOMeController.m in Sources */,
 				467521C91C4BEE6B00362E8A /* GDMainNController.m in Sources */,
 				3A92F3771C49470000328E36 /* AppDelegate.m in Sources */,
@@ -354,6 +379,7 @@
 				0A0A15BD1C4BC18300B7158A /* LEOMeNavController.m in Sources */,
 				0A0A161A1C4BE76300B7158A /* LEOMeCell.m in Sources */,
 				467521CB1C4BEE6B00362E8A /* GDMainTeacherVController.m in Sources */,
+				4665B3CD1C4D0E4800BCF634 /* GDVoiceDoneVController.m in Sources */,
 				4665B3C71C4CB5B100BCF634 /* GDVoiceMainVController.m in Sources */,
 				467521CA1C4BEE6B00362E8A /* GDMainStudentController.m in Sources */,
 				3A92F38D1C49478F00328E36 /* LEOMainNavController.m in Sources */,

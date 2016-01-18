@@ -1,26 +1,24 @@
 //
-//  GDTextMainVController.m
+//  GDVoiceDoneVController.m
 //  LEOLearningCircle
 //
 //  Created by Geeven on 16/1/18.
 //  Copyright © 2016年 zz. All rights reserved.
 //
 
-#import "GDTextMainVController.h"
+#import "GDVoiceDoneVController.h"
 
-@interface GDTextMainVController ()
+@interface GDVoiceDoneVController ()
 
 @end
 
-@implementation GDTextMainVController
-
+@implementation GDVoiceDoneVController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
