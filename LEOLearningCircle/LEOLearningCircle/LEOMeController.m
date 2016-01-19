@@ -45,18 +45,23 @@
     [super viewDidLoad];
     //去掉tableView的分割线
     self.tableView.separatorStyle = NO;
+    self.tableView.scrollEnabled = NO;
     [self statusViewToBlackColor];
 
+    //添加tableView的headView
     LEOMeHeadView *headView = [[LEOMeHeadView alloc]initWithFrame:CGRectMake(0, 0, 375, 135)];
     self.tableView.tableHeaderView = headView;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(registerAccount)];
     [headView addGestureRecognizer:tap];
     
+    [self.navigationController setNeedsStatusBarAppearanceUpdate];
+    
    
     
  
 }
+
 //隐藏控制器navgationBar
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
