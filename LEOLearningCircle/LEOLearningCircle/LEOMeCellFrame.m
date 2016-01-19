@@ -16,7 +16,7 @@
     
     _meModel = meModel;
     
-    CGFloat padding = 10;
+    CGFloat padding = 20;
     
     CGFloat iconW = 34;
     CGFloat iconH = iconW;
@@ -27,11 +27,11 @@
     CGSize titleSize = CGSizeMake(355, MAXFLOAT);
     NSDictionary *textDict = @{NSFontAttributeName : [UIFont systemFontOfSize:17]};
     CGSize textSize = [meModel.title boundingRectWithSize:titleSize options:NSStringDrawingUsesLineFragmentOrigin attributes:textDict context:nil].size;
-    CGFloat titleX = CGRectGetMaxX(_iconFrame) + 3 * padding;
+    CGFloat titleX = CGRectGetMaxX(_iconFrame) + padding;
     CGFloat titleY = padding + (iconH - textSize.height) * 0.5;
     _titleFrame = CGRectMake(titleX, titleY, textSize.width, textSize.height);
     
-    _cellHeight = CGRectGetMaxY(_iconFrame) + padding;
+    _cellHeight = CGRectGetMaxY(_iconFrame) + padding ;
 }
 
 @end

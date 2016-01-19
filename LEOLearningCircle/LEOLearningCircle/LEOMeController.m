@@ -11,6 +11,7 @@
 #import "LEOMeCell.h"
 #import "LEOMeCellFrame.h"
 #import "LEOMeHeadView.h"
+#import "LEORegisterController.h"
 @interface LEOMeController ()
 
 @property (nonatomic ,strong)NSArray *meFrames;
@@ -42,25 +43,25 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.navigationController.navigationBar.hidden = YES;
-    
     //去掉tableView的分割线
     self.tableView.separatorStyle = NO;
-    
+
     LEOMeHeadView *headView = [[LEOMeHeadView alloc]initWithFrame:CGRectMake(0, 0, 375, 135)];
-
     self.tableView.tableHeaderView = headView;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(registerAccount)];
+    [headView addGestureRecognizer:tap];
  
-    
-
-    
-
+}
+//隐藏控制器navgationBar
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)registerAccount {
+    LEORegisterController *registerVc = [[LEORegisterController alloc]init];
+    [self.navigationController pushViewController:registerVc animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -79,6 +80,8 @@
     LEOMeCellFrame *cellFrame = self.meFrames[indexPath.row];
     return cellFrame.cellHeight;
 }
+
+
 
 
 @end

@@ -14,6 +14,7 @@
 		0A0A161E1C4BE77600B7158A /* LEOMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A161D1C4BE77600B7158A /* LEOMeController.m */; };
 		0A0A167D1C4CB8CC00B7158A /* LEOMeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A167C1C4CB8CC00B7158A /* LEOMeHeadView.m */; };
 		0A0A16D41C4DD17C00B7158A /* LEOMeNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A16D31C4DD17C00B7158A /* LEOMeNavController.m */; };
+		0A0A16D81C4DD75E00B7158A /* LEORegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A0A16D71C4DD75E00B7158A /* LEORegisterController.m */; };
 		3A92F3741C49470000328E36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92F3731C49470000328E36 /* main.m */; };
 		3A92F3771C49470000328E36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92F3761C49470000328E36 /* AppDelegate.m */; };
 		3A92F37F1C49470000328E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A92F37E1C49470000328E36 /* Assets.xcassets */; };
@@ -46,6 +47,8 @@
 		0A0A167C1C4CB8CC00B7158A /* LEOMeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOMeHeadView.m; sourceTree = "<group>"; };
 		0A0A16D21C4DD17C00B7158A /* LEOMeNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOMeNavController.h; sourceTree = "<group>"; };
 		0A0A16D31C4DD17C00B7158A /* LEOMeNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOMeNavController.m; sourceTree = "<group>"; };
+		0A0A16D61C4DD75E00B7158A /* LEORegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEORegisterController.h; sourceTree = "<group>"; };
+		0A0A16D71C4DD75E00B7158A /* LEORegisterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEORegisterController.m; sourceTree = "<group>"; };
 		3A92F36F1C49470000328E36 /* LEOLearningCircle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LEOLearningCircle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A92F3731C49470000328E36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3A92F3751C49470000328E36 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 		0A0A15C01C4BC1A800B7158A /* views */ = {
 			isa = PBXGroup;
 			children = (
+				0A0A167B1C4CB8CC00B7158A /* LEOMeHeadView.h */,
+				0A0A167C1C4CB8CC00B7158A /* LEOMeHeadView.m */,
 				0A0A16161C4BE76300B7158A /* LEOMeCell.h */,
 				0A0A16171C4BE76300B7158A /* LEOMeCell.m */,
 				0A0A16181C4BE76300B7158A /* LEOMeCellFrame.h */,
@@ -123,12 +128,12 @@
 		0A0A160A1C4BC1BA00B7158A /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0A0A161C1C4BE77600B7158A /* LEOMeController.h */,
-				0A0A161D1C4BE77600B7158A /* LEOMeController.m */,
 				0A0A16D21C4DD17C00B7158A /* LEOMeNavController.h */,
 				0A0A16D31C4DD17C00B7158A /* LEOMeNavController.m */,
-				0A0A167B1C4CB8CC00B7158A /* LEOMeHeadView.h */,
-				0A0A167C1C4CB8CC00B7158A /* LEOMeHeadView.m */,
+				0A0A161C1C4BE77600B7158A /* LEOMeController.h */,
+				0A0A161D1C4BE77600B7158A /* LEOMeController.m */,
+				0A0A16D61C4DD75E00B7158A /* LEORegisterController.h */,
+				0A0A16D71C4DD75E00B7158A /* LEORegisterController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 				0A0A161E1C4BE77600B7158A /* LEOMeController.m in Sources */,
 				467521C91C4BEE6B00362E8A /* GDMainNController.m in Sources */,
 				3A92F3771C49470000328E36 /* AppDelegate.m in Sources */,
+				0A0A16D81C4DD75E00B7158A /* LEORegisterController.m in Sources */,
 				3A92F3741C49470000328E36 /* main.m in Sources */,
 				3A92F38E1C49478F00328E36 /* LEOMainTabBarController.m in Sources */,
 				0A0A15BA1C4BC18300B7158A /* LEOMe.m in Sources */,
