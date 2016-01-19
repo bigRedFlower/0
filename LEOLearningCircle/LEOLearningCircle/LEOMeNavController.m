@@ -2,12 +2,11 @@
 //  LEOMeNavController.m
 //  LEOLearningCircle
 //
-//  Created by 李 on 16/1/17.
+//  Created by 李 on 16/1/19.
 //  Copyright © 2016年 zz. All rights reserved.
 //
 
 #import "LEOMeNavController.h"
-#import "LEOMeController.h"
 
 @interface LEOMeNavController ()
 
@@ -18,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
 }
 
 - (void)didReceiveMemoryWarning {
