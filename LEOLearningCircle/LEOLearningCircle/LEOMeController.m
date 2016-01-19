@@ -44,20 +44,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //去掉tableView的分割线
-//    self.view.backgroundColor = [UIColor blackColor];
     self.tableView.separatorStyle = NO;
+    [self statusViewToBlackColor];
 
     LEOMeHeadView *headView = [[LEOMeHeadView alloc]initWithFrame:CGRectMake(0, 0, 375, 135)];
     self.tableView.tableHeaderView = headView;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(registerAccount)];
     [headView addGestureRecognizer:tap];
+    
+   
+    
  
 }
 //隐藏控制器navgationBar
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)statusViewToBlackColor {
+    UIView *status = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 20)];
+    status.backgroundColor = [UIColor blackColor];
+    UIView *backgroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenH, LEOScreenW)];
+    [backgroundView addSubview:status];
+    self.tableView.backgroundView  = backgroundView;
 }
 
 - (void)registerAccount {
