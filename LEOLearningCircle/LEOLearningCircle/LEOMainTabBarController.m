@@ -52,14 +52,16 @@
 }
 
 - (void)addOneChindVc:(UIViewController*)childVc title:(NSString*)title imageNamed:(NSString*)imageName selectedImage:(NSString*)selectedImageName NavigationController:(UINavigationController*)nav{
-    
+    //设置控制器的标题
     childVc.title = title;
-    
+    //设置普通状态下tabbar的图片
     childVc.tabBarItem.image = [UIImage imageNamed:imageName];
-    
+    //设置选中状态下tabbar的图片
     UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
+    //用最原始的渲染模式渲染
     selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     childVc.tabBarItem.selectedImage = selectedImage;
+    //将导航控制器加入到tabbar控制器中
     [self addChildViewController:nav];
     
 }

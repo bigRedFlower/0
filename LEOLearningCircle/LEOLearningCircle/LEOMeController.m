@@ -44,6 +44,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //去掉tableView的分割线
+//    self.view.backgroundColor = [UIColor blackColor];
     self.tableView.separatorStyle = NO;
 
     LEOMeHeadView *headView = [[LEOMeHeadView alloc]initWithFrame:CGRectMake(0, 0, 375, 135)];

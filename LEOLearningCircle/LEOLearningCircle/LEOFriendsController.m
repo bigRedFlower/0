@@ -23,6 +23,8 @@
     
     self.navigationController.navigationBarHidden = YES;
     [self setBackGroundView];
+//    self.view.backgroundColor = [UIColor blackColor];
+//    self.view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"friend_state"].CGImage);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,14 +32,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 //设置头部下拉视图
 - (void)setBackGroundView{
+    UIView *blackView = [[UIView alloc ]initWithFrame:CGRectMake(0, 0, LEOScreenW, 20)];
+    blackView.backgroundColor = [UIColor blackColor];
+    
     
     UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, LEOScreenW, LEOHeaderH-20)];
     headerView.contentMode = UIViewContentModeScaleAspectFill;
     headerView.image = [UIImage imageNamed:@"friend_background"];
     UIView *backGroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOScreenH)];
+    [backGroundView addSubview:blackView];
     [backGroundView addSubview:headerView];
     self.headerImgView = headerView;
     self.tableView.backgroundView = backGroundView;
