@@ -21,7 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     self.navigationController.navigationBarHidden = YES;
     [self setBackGroundView];
 }
@@ -35,7 +34,7 @@
 //设置头部下拉视图
 - (void)setBackGroundView{
     
-    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOHeaderH)];
+    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, LEOScreenW, LEOHeaderH-20)];
     headerView.contentMode = UIViewContentModeScaleAspectFill;
     headerView.image = [UIImage imageNamed:@"friend_background"];
     UIView *backGroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOScreenH)];

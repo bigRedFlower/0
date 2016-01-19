@@ -31,15 +31,16 @@
 +(void)initialize{
     
     UINavigationBar *navBar = [UINavigationBar appearance];
-//    navBar.barStyle = UIBarStyleBlack;
     [navBar setTintColor:[UIColor whiteColor]];
-//    UIImage *img = [UIImage imageNamed:@"friend_black"];
+//    UIImage *img = [UIImage imageNamed:@"friend_41"];
 //    img = [img stretchableImageWithLeftCapWidth:img.size.width * 0.5 topCapHeight:img.size.height * 0.5];
 //    [navBar setBackgroundImage:img forBarMetrics:UIBarMetricsDefault];
     [navBar setBackgroundColor:[UIColor blackColor]];
     [navBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
 }
-
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
 
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
