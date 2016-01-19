@@ -49,8 +49,8 @@
     [backGroundView addSubview:headerView];
     self.headerImgView = headerView;
     self.tableView.backgroundView = backGroundView;
-    
 }
+
 
 
 #pragma mark - Table view data source
