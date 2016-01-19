@@ -23,6 +23,8 @@
     
     self.navigationController.navigationBarHidden = YES;
     [self setBackGroundView];
+    //取消分割线
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 //    self.view.backgroundColor = [UIColor blackColor];
 //    self.view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"friend_state"].CGImage);
 }
@@ -31,7 +33,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+//设置状态栏的样式
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
@@ -41,8 +43,8 @@
     blackView.backgroundColor = [UIColor blackColor];
     
     
-    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, LEOScreenW, LEOHeaderH-20)];
-    headerView.contentMode = UIViewContentModeScaleAspectFill;
+    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, LEOScreenW, LEOHeaderH)];
+    headerView.contentMode = UIViewContentModeScaleToFill;
     headerView.image = [UIImage imageNamed:@"friend_background"];
     UIView *backGroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOScreenH)];
     [backGroundView addSubview:blackView];
@@ -51,7 +53,15 @@
     self.tableView.backgroundView = backGroundView;
 }
 
-
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGRect tempRect = self.headerImgView.frame;
+    if (scrollView.contentOffset.y>0) {
+        tempRect.origin.y = - scrollView.contentOffset.y;
+        self.headerImgView.frame = tempRect;
+    }else{
+        tempRect.origin.y = scrollView.contentOffset.y;
+    }
+}
 
 #pragma mark - Table view data source
 
