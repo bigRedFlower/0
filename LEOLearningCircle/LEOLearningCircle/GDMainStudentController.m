@@ -34,6 +34,7 @@
 
 @implementation GDMainStudentController
 
+#pragma mark - systerm
 -(void)viewWillAppear:(BOOL)animated{
 
     [super viewWillAppear:animated];
@@ -47,33 +48,30 @@
     self.navigationController.navigationBarHidden = NO;
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle{
+
+    return UIStatusBarStyleLightContent;
+
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.view.backgroundColor = [UIColor whiteColor];
 
     self.view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"now_16"].CGImage);
     
-//    self.navigationController.navigationBarHidden = YES;
-
-
-//    self.hidesBottomBarWhenPushed  = NO;
-
     [self loadSubViews];
     
-
 }
 
-
--(void)loadSubViewsLogIn{
-
-
-}
 -(void)loadSubViews{
 
-    UIImageView * headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0,MainSize.width ,150)];
+    //1.顶部视图
+    UIImageView * headImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20,MainSize.width ,150)];
     headImageView.image = [UIImage imageNamed:@"now_answerBackGround"];
     [self.view addSubview:headImageView];
     
-    //1.设置中间拍照视图
+    //2.设置中间拍照视图
     UIImage * photoesImage = [UIImage imageNamed:@"now_9"];
     UIImageView * photoImageView = [[UIImageView alloc]initWithImage:photoesImage];
     
@@ -91,7 +89,7 @@
 
     [self.view addSubview:photoImageView];
     
-    //2.设置左边语音视图
+    //3.设置左边语音视图
     UIImage * voiceImage = [UIImage imageNamed:@"now_8"];
     UIImageView * voiceImageView = [[UIImageView alloc]initWithImage:voiceImage];
     
@@ -110,7 +108,7 @@
     [self.view addSubview:voiceImageView];
     
     
-    //3.设置右侧文本视图
+    //4.设置右侧文本视图
     UIImage * textImage = [UIImage imageNamed:@"now_10"];
     UIImageView * textImageView = [[UIImageView alloc]initWithImage:textImage];
     
@@ -128,26 +126,19 @@
     
     [self.view addSubview:textImageView];
     
-    //设置右侧问题列表控制器
+    //5.设置右侧问题列表控制器
     UIButton * questionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage * btnImage = [UIImage imageNamed:@"now_2"];
     [questionBtn setBackgroundImage:btnImage forState:UIControlStateNormal];
     CGFloat btnY = CGRectGetMaxY(self.navigationController.navigationBar.frame) - btnImage.size.height;
     questionBtn.frame = CGRectMake(MainSize.width-btnImage.size.width-Margin,btnY , btnImage.size.width, btnImage.size.height);
     
-    [questionBtn addTarget:self action:@selector(clickQestionListBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [questionBtn addTarget:self action:@selector(didClickBtn:) forControlEvents:UIControlEventTouchUpInside];
+    questionBtn.tag = 4;
     [self.view addSubview:questionBtn];
     
 }
 
-
--(void)clickQestionListBtn:(UIButton*)btn{
-
-    GDQutionListTController * questionListTC = [[GDQutionListTController alloc]init];
-    questionListTC.navigationItem.title = @"问题列表";
-    [self.navigationController pushViewController:questionListTC animated:YES];
-
-}
 
 -(void)didClickBtn:(UIButton*)btn{
     if (btn.tag == 1) {
@@ -163,10 +154,13 @@
         GDTextMainVController * textMainVc = [[GDTextMainVController alloc]init];
         [self.navigationController pushViewController:textMainVc animated:YES];
     }
-
-
-
+    if (btn.tag == 4) {
+        GDQutionListTController * questionListTC = [[GDQutionListTController alloc]init];
+        questionListTC.navigationItem.title = @"问题列表";
+        [self.navigationController pushViewController:questionListTC animated:YES];
+    }
 }
+
 
 -(UIButton*)creatButtonWithImageView:(UIImageView*)imageView{
     
