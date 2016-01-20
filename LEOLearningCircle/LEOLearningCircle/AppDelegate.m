@@ -24,6 +24,7 @@
     LEOMainTabBarController *mainVc = [[LEOMainTabBarController alloc]init];
     self.window.rootViewController = mainVc;
     [self.window makeKeyAndVisible];
+    
 //    application.statusBarStyle = UIStatusBarStyleDefault;
     
     return YES;

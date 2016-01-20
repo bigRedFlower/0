@@ -16,6 +16,7 @@
 #import "LEOFriendsController.h"
 #import "LEOMeController.h"
 #import "GDMainStudentController.h"
+#import "LEOFriendsViewController.h"
 @interface LEOMainTabBarController ()
 
 @end
@@ -34,7 +35,7 @@
 - (void)addChildViewControllers{
     
     //伙伴圈
-    LEOFriendsController *friend = [[LEOFriendsController alloc]init];
+    LEOFriendsViewController *friend = [[LEOFriendsViewController alloc]init];
     LEOFriendsNavController *friendNav = [[LEOFriendsNavController alloc]initWithRootViewController:friend];
     [self addOneChindVc:friend title:@"伙伴圈" imageNamed:@"TabBar1" selectedImage:@"TabBar1_sel" NavigationController:friendNav];
     

@@ -56,9 +56,6 @@
     [headView addGestureRecognizer:tap];
     
     [self.navigationController setNeedsStatusBarAppearanceUpdate];
-    
-   
-    
  
 }
 

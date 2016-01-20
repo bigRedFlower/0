@@ -18,15 +18,22 @@
 
 @implementation LEOFriendsController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBarHidden = YES;
+    //self.tableView.backgroundColor = [UIColor blackColor];
+    
+    
     [self setBackGroundView];
+    self.view.backgroundColor = [UIColor blackColor];
+    self.tableView.backgroundColor = [UIColor blackColor];
+    self.navigationController.navigationBarHidden = YES;
     //取消分割线
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 //    self.view.backgroundColor = [UIColor blackColor];
-//    self.view.layer.contents = (__bridge id _Nullable)([UIImage imageNamed:@"friend_state"].CGImage);
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,30 +45,50 @@
     return UIStatusBarStyleLightContent;
 }
 //设置头部下拉视图
+//- (void)setBackGroundView{
+////    UIView *blackView = [[UIView alloc ]initWithFrame:CGRectMake(0, 0, LEOScreenW, 20)];
+////    blackView.backgroundColor = [UIColor blackColor];
+//    
+//    
+//    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, LEOScreenW, LEOHeaderH)];
+//    headerView.contentMode = UIViewContentModeScaleToFill;
+//    headerView.image = [UIImage imageNamed:@"friend_background"];
+//    UIView *backGroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOScreenH)];
+////    [backGroundView addSubview:blackView];
+//    [backGroundView addSubview:headerView];
+//    self.headerImgView = headerView;
+//    self.tableView.backgroundView = backGroundView;
+//}
+
 - (void)setBackGroundView{
-    UIView *blackView = [[UIView alloc ]initWithFrame:CGRectMake(0, 0, LEOScreenW, 20)];
-    blackView.backgroundColor = [UIColor blackColor];
     
-    
-    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 20, LEOScreenW, LEOHeaderH)];
+    UIImageView *headerView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"friend_background"]];
     headerView.contentMode = UIViewContentModeScaleToFill;
-    headerView.image = [UIImage imageNamed:@"friend_background"];
-    UIView *backGroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOScreenH)];
-    [backGroundView addSubview:blackView];
+    UIView *backGroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 200)];
+
     [backGroundView addSubview:headerView];
     self.headerImgView = headerView;
-    self.tableView.backgroundView = backGroundView;
+    self.tableView.tableHeaderView = backGroundView;
+    self.tableView.tableHeaderView.frame = CGRectMake(0, 0, 0, 200);
+    
 }
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGRect tempRect = self.headerImgView.frame;
-    if (scrollView.contentOffset.y>0) {
-        tempRect.origin.y = - scrollView.contentOffset.y;
-        self.headerImgView.frame = tempRect;
-    }else{
-        tempRect.origin.y = scrollView.contentOffset.y;
-    }
-}
+//
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    CGRect tempRect = self.headerImgView.frame;
+//    if (scrollView.contentOffset.y>0) {
+//        tempRect.origin.y = - scrollView.contentOffset.y;
+//        self.headerImgView.frame = tempRect;
+//    }else{
+//        
+//        tempRect.origin.y = 20;
+//        tempRect.size.height = LEOHeaderH - scrollView.contentOffset.y;
+//        
+//        self.headerImgView.frame = tempRect;
+//    }
+//}
+
+
 
 #pragma mark - Table view data source
 
