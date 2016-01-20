@@ -7,7 +7,7 @@
 //
 
 #import "LEOFriendsViewController.h"
-
+#import "LEOHeaderView.h"
 @interface LEOFriendsViewController ()<UITableViewDelegate>
 
 @property (nonatomic, strong ) UITableView *tableView;
@@ -29,14 +29,13 @@
 }
 
 - (void)setBackGroundView{
-
-    UIImageView *headerView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOHeaderH)];
+    UIImageView *headerView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"friend_header"]];
     headerView.contentMode = UIViewContentModeScaleToFill;
-    headerView.image = [UIImage imageNamed:@"friend_header"];
-    UIView *backGroundView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOScreenH)];
+    LEOHeaderView *backGroundView = [[LEOHeaderView alloc]initWithFrame:CGRectMake(0, 0, LEOScreenW, LEOScreenH)];
     [backGroundView addSubview:headerView];
     self.headerImgView = headerView;
-    self.tableView.backgroundView = backGroundView;
+    self.tableView.tableHeaderView.frame = CGRectMake(0, 0, LEOScreenW, LEOHeaderH);
+    self.tableView.tableHeaderView = backGroundView;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -45,8 +44,8 @@
         tempRect.origin.y = - scrollView.contentOffset.y;
         self.headerImgView.frame = tempRect;
     }else{
-        tempRect.origin.y = 0;
-        tempRect.size.height = LEOHeaderH - scrollView.contentOffset.y;
+        tempRect.origin.y = -20;
+        tempRect.size.height = LEOHeaderH - scrollView.contentOffset.y/5;
         self.headerImgView.frame = tempRect;
     }
 }

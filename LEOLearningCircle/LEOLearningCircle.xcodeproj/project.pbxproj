@@ -24,6 +24,7 @@
 		3A92F38D1C49478F00328E36 /* LEOMainNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92F38A1C49478F00328E36 /* LEOMainNavController.m */; };
 		3A92F38E1C49478F00328E36 /* LEOMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A92F38C1C49478F00328E36 /* LEOMainTabBarController.m */; };
 		3A9C01711C4FA7DE009433CE /* LEOFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C01701C4FA7DE009433CE /* LEOFriendsViewController.m */; };
+		3A9C01751C4FB3C1009433CE /* LEOHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A9C01741C4FB3C1009433CE /* LEOHeaderView.m */; };
 		3AC273D01C4BC9C3009B73C5 /* LEOFriendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC273CF1C4BC9C3009B73C5 /* LEOFriendsController.m */; };
 		3AC273D31C4BCD29009B73C5 /* LEOFriendsNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC273D21C4BCD29009B73C5 /* LEOFriendsNavController.m */; };
 		4665B3C71C4CB5B100BCF634 /* GDVoiceMainVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4665B3C61C4CB5B100BCF634 /* GDVoiceMainVController.m */; };
@@ -70,6 +71,8 @@
 		3A92F38C1C49478F00328E36 /* LEOMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOMainTabBarController.m; sourceTree = "<group>"; };
 		3A9C016F1C4FA7DE009433CE /* LEOFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOFriendsViewController.h; sourceTree = "<group>"; };
 		3A9C01701C4FA7DE009433CE /* LEOFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOFriendsViewController.m; sourceTree = "<group>"; };
+		3A9C01731C4FB3C1009433CE /* LEOHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOHeaderView.h; sourceTree = "<group>"; };
+		3A9C01741C4FB3C1009433CE /* LEOHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOHeaderView.m; sourceTree = "<group>"; };
 		3AC273CE1C4BC9C3009B73C5 /* LEOFriendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOFriendsController.h; sourceTree = "<group>"; };
 		3AC273CF1C4BC9C3009B73C5 /* LEOFriendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOFriendsController.m; sourceTree = "<group>"; };
 		3AC273D11C4BCD29009B73C5 /* LEOFriendsNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOFriendsNavController.h; sourceTree = "<group>"; };
@@ -257,6 +260,7 @@
 		3A92F3941C494F8C00328E36 /* 伙伴圈(friends) */ = {
 			isa = PBXGroup;
 			children = (
+				3A9C01721C4FB3A5009433CE /* views */,
 				3A92F3951C494FA000328E36 /* controllers */,
 			);
 			name = "伙伴圈(friends)";
@@ -273,6 +277,15 @@
 				3A9C01701C4FA7DE009433CE /* LEOFriendsViewController.m */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		3A9C01721C4FB3A5009433CE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				3A9C01731C4FB3C1009433CE /* LEOHeaderView.h */,
+				3A9C01741C4FB3C1009433CE /* LEOHeaderView.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		4665B3D11C4D3FE500BCF634 /* viewes */ = {
@@ -405,6 +418,7 @@
 				0A0A161A1C4BE76300B7158A /* LEOMeCell.m in Sources */,
 				467521CB1C4BEE6B00362E8A /* GDMainTeacherVController.m in Sources */,
 				4665B3CD1C4D0E4800BCF634 /* GDVoiceDoneVController.m in Sources */,
+				3A9C01751C4FB3C1009433CE /* LEOHeaderView.m in Sources */,
 				4665B3C71C4CB5B100BCF634 /* GDVoiceMainVController.m in Sources */,
 				467521CA1C4BEE6B00362E8A /* GDMainStudentController.m in Sources */,
 				0A0A16D41C4DD17C00B7158A /* LEOMeNavController.m in Sources */,
