@@ -35,6 +35,10 @@
 		467521C91C4BEE6B00362E8A /* GDMainNController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521C41C4BEE6B00362E8A /* GDMainNController.m */; };
 		467521CA1C4BEE6B00362E8A /* GDMainStudentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521C61C4BEE6B00362E8A /* GDMainStudentController.m */; };
 		467521CB1C4BEE6B00362E8A /* GDMainTeacherVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521C81C4BEE6B00362E8A /* GDMainTeacherVController.m */; };
+		E41CF8761C520DCE00EB5342 /* LEOCoursePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E41CF8751C520DCE00EB5342 /* LEOCoursePopView.m */; };
+		E47543ED1C50A0800051CE3C /* LEOCourseController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47543EC1C50A0800051CE3C /* LEOCourseController.m */; };
+		E47543F31C50AC000051CE3C /* LEOCourseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E47543F21C50AC000051CE3C /* LEOCourseHeaderView.m */; };
+		E47543F61C50C0CB0051CE3C /* LEOCourseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47543F51C50C0CB0051CE3C /* LEOCourseNavController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +97,14 @@
 		467521C61C4BEE6B00362E8A /* GDMainStudentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMainStudentController.m; sourceTree = "<group>"; };
 		467521C71C4BEE6B00362E8A /* GDMainTeacherVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMainTeacherVController.h; sourceTree = "<group>"; };
 		467521C81C4BEE6B00362E8A /* GDMainTeacherVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMainTeacherVController.m; sourceTree = "<group>"; };
+		E41CF8741C520DCE00EB5342 /* LEOCoursePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOCoursePopView.h; sourceTree = "<group>"; };
+		E41CF8751C520DCE00EB5342 /* LEOCoursePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOCoursePopView.m; sourceTree = "<group>"; };
+		E47543EB1C50A0800051CE3C /* LEOCourseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOCourseController.h; sourceTree = "<group>"; };
+		E47543EC1C50A0800051CE3C /* LEOCourseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOCourseController.m; sourceTree = "<group>"; };
+		E47543F11C50AC000051CE3C /* LEOCourseHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOCourseHeaderView.h; sourceTree = "<group>"; };
+		E47543F21C50AC000051CE3C /* LEOCourseHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOCourseHeaderView.m; sourceTree = "<group>"; };
+		E47543F41C50C0CB0051CE3C /* LEOCourseNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOCourseNavController.h; sourceTree = "<group>"; };
+		E47543F51C50C0CB0051CE3C /* LEOCourseNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOCourseNavController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +224,7 @@
 			children = (
 				467521C11C4BEE1B00362E8A /* AnswerNow(即时答) */,
 				0A0A15B21C4BC14100B7158A /* 我(me) */,
+				E47543E41C508CBB0051CE3C /* 今日大课(TodayCourse) */,
 				3A92F3941C494F8C00328E36 /* 伙伴圈(friends) */,
 				3A92F3901C49485B00328E36 /* 主框架 */,
 			);
@@ -327,6 +340,45 @@
 			name = Controlleres;
 			sourceTree = "<group>";
 		};
+		E47543E41C508CBB0051CE3C /* 今日大课(TodayCourse) */ = {
+			isa = PBXGroup;
+			children = (
+				E47543E71C50A01B0051CE3C /* Model */,
+				E47543E61C50A0110051CE3C /* View */,
+				E47543E51C50A00B0051CE3C /* Controller */,
+			);
+			name = "今日大课(TodayCourse)";
+			sourceTree = "<group>";
+		};
+		E47543E51C50A00B0051CE3C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E47543EB1C50A0800051CE3C /* LEOCourseController.h */,
+				E47543EC1C50A0800051CE3C /* LEOCourseController.m */,
+				E47543F41C50C0CB0051CE3C /* LEOCourseNavController.h */,
+				E47543F51C50C0CB0051CE3C /* LEOCourseNavController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E47543E61C50A0110051CE3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E47543F11C50AC000051CE3C /* LEOCourseHeaderView.h */,
+				E47543F21C50AC000051CE3C /* LEOCourseHeaderView.m */,
+				E41CF8741C520DCE00EB5342 /* LEOCoursePopView.h */,
+				E41CF8751C520DCE00EB5342 /* LEOCoursePopView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E47543E71C50A01B0051CE3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -403,6 +455,7 @@
 				4665B3D01C4D3EB300BCF634 /* GDQutionListTController.m in Sources */,
 				0A0A161B1C4BE76300B7158A /* LEOMeCellFrame.m in Sources */,
 				3AC273D01C4BC9C3009B73C5 /* LEOFriendsController.m in Sources */,
+				E47543F31C50AC000051CE3C /* LEOCourseHeaderView.m in Sources */,
 				0A0A167D1C4CB8CC00B7158A /* LEOMeHeadView.m in Sources */,
 				0A0A16DC1C4DFE2400B7158A /* LEOFindPasswordController.m in Sources */,
 				4665B3D41C4D400400BCF634 /* GDQuestionListTableViewCell.m in Sources */,
@@ -410,11 +463,14 @@
 				467521C91C4BEE6B00362E8A /* GDMainNController.m in Sources */,
 				3A92F3771C49470000328E36 /* AppDelegate.m in Sources */,
 				0A0A16D81C4DD75E00B7158A /* LEORegisterController.m in Sources */,
+				E47543F61C50C0CB0051CE3C /* LEOCourseNavController.m in Sources */,
 				3A92F3741C49470000328E36 /* main.m in Sources */,
 				3A92F38E1C49478F00328E36 /* LEOMainTabBarController.m in Sources */,
+				E47543ED1C50A0800051CE3C /* LEOCourseController.m in Sources */,
 				0A0A15BA1C4BC18300B7158A /* LEOMe.m in Sources */,
 				3A9C01711C4FA7DE009433CE /* LEOFriendsViewController.m in Sources */,
 				0A0A16DF1C4DFFAF00B7158A /* LEONewUserController.m in Sources */,
+				E41CF8761C520DCE00EB5342 /* LEOCoursePopView.m in Sources */,
 				0A0A161A1C4BE76300B7158A /* LEOMeCell.m in Sources */,
 				467521CB1C4BEE6B00362E8A /* GDMainTeacherVController.m in Sources */,
 				4665B3CD1C4D0E4800BCF634 /* GDVoiceDoneVController.m in Sources */,

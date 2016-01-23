@@ -17,6 +17,10 @@
 #import "LEOMeController.h"
 #import "GDMainStudentController.h"
 #import "LEOFriendsViewController.h"
+
+#import "LEOCourseController.h"
+#import "LEOCourseNavController.h"
+
 @interface LEOMainTabBarController ()
 
 @end
@@ -44,12 +48,19 @@
     GDMainNController *stuNav = [[GDMainNController alloc]initWithRootViewController:stu];
     [self addOneChindVc:stu title:@"即时答" imageNamed:@"TabBar2" selectedImage:@"TabBar2_sel" NavigationController:stuNav];
     
+    //今日大课
+    LEOCourseController *course = [[LEOCourseController alloc] init];
+    LEOCourseNavController *courseNav = [[LEOCourseNavController alloc] initWithRootViewController:course];
+    [self addOneChindVc:course title:@"今日大课" imageNamed:@"TabBar3" selectedImage:@"TabBar3_sel" NavigationController:courseNav];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:44.0/255.0 green:182.0/255.0 blue:167.0/255.0 alpha:1.0], NSForegroundColorAttributeName, nil];
+    [courseNav.tabBarItem setTitleTextAttributes:dict forState:UIControlStateSelected];
+    
+    
     //我
     LEOMeController *me = [[LEOMeController alloc]init];
     LEOMainNavController *meNav = [[LEOMainNavController alloc]initWithRootViewController:me];
     [self addOneChindVc:me title:@"我" imageNamed:@"TabBar4" selectedImage:@"TabBar4_sel" NavigationController:meNav];
-    
-    
+
 }
 
 - (void)addOneChindVc:(UIViewController*)childVc title:(NSString*)title imageNamed:(NSString*)imageName selectedImage:(NSString*)selectedImageName NavigationController:(UINavigationController*)nav{
