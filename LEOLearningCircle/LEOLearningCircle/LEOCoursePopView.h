@@ -10,4 +10,6 @@
 
 @interface LEOCoursePopView : UIView
 
+@property (nonatomic, strong) UIViewController *vc;
+
 @end

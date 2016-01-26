@@ -15,7 +15,6 @@
 
 @property (nonatomic, strong) UIButton *todayBtn;
 @property (nonatomic, strong) UIButton *otherOptionBtn;
-@property (nonatomic, strong) LEOCoursePopView *popView;
 
 @end
 
@@ -25,8 +24,8 @@
     self = [super initWithFrame:frame];
     
     self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"545464684685648"]];
-//    [self.layer.contents setImage:[UIImage imageNamed:@"545464684685648"]];
-    
+    //错误代码无法显示图片
+    //    [self.layer.contents setImage:[UIImage imageNamed:@"545464684685648"]];
     self.todayBtn = [[UIButton alloc] init];
     [self.todayBtn addTarget:self action:@selector(clickTodayBtn) forControlEvents:UIControlEventTouchUpInside];
     self.otherOptionBtn = [[UIButton alloc] init];

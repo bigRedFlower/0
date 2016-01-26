@@ -35,7 +35,12 @@
 		467521C91C4BEE6B00362E8A /* GDMainNController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521C41C4BEE6B00362E8A /* GDMainNController.m */; };
 		467521CA1C4BEE6B00362E8A /* GDMainStudentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521C61C4BEE6B00362E8A /* GDMainStudentController.m */; };
 		467521CB1C4BEE6B00362E8A /* GDMainTeacherVController.m in Sources */ = {isa = PBXBuildFile; fileRef = 467521C81C4BEE6B00362E8A /* GDMainTeacherVController.m */; };
+		E41147431C54D0E5005F6EAA /* LEOMainTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E41147421C54D0E5005F6EAA /* LEOMainTableView.m */; };
+		E413EBA51C53462000CA1ED8 /* LEOCourseBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = E413EBA41C53462000CA1ED8 /* LEOCourseBtnView.m */; };
+		E413EBA81C534DB700CA1ED8 /* LEOShowGradeTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E413EBA71C534DB700CA1ED8 /* LEOShowGradeTableView.m */; };
 		E41CF8761C520DCE00EB5342 /* LEOCoursePopView.m in Sources */ = {isa = PBXBuildFile; fileRef = E41CF8751C520DCE00EB5342 /* LEOCoursePopView.m */; };
+		E453D3C91C53763800146F06 /* LEOShowCourseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E453D3C81C53763800146F06 /* LEOShowCourseTableView.m */; };
+		E453D3CD1C5394ED00146F06 /* LEOMyBuyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E453D3CC1C5394ED00146F06 /* LEOMyBuyViewController.m */; };
 		E47543ED1C50A0800051CE3C /* LEOCourseController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47543EC1C50A0800051CE3C /* LEOCourseController.m */; };
 		E47543F31C50AC000051CE3C /* LEOCourseHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E47543F21C50AC000051CE3C /* LEOCourseHeaderView.m */; };
 		E47543F61C50C0CB0051CE3C /* LEOCourseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47543F51C50C0CB0051CE3C /* LEOCourseNavController.m */; };
@@ -97,8 +102,18 @@
 		467521C61C4BEE6B00362E8A /* GDMainStudentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMainStudentController.m; sourceTree = "<group>"; };
 		467521C71C4BEE6B00362E8A /* GDMainTeacherVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDMainTeacherVController.h; sourceTree = "<group>"; };
 		467521C81C4BEE6B00362E8A /* GDMainTeacherVController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDMainTeacherVController.m; sourceTree = "<group>"; };
+		E41147411C54D0E5005F6EAA /* LEOMainTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOMainTableView.h; sourceTree = "<group>"; };
+		E41147421C54D0E5005F6EAA /* LEOMainTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOMainTableView.m; sourceTree = "<group>"; };
+		E413EBA31C53462000CA1ED8 /* LEOCourseBtnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOCourseBtnView.h; sourceTree = "<group>"; };
+		E413EBA41C53462000CA1ED8 /* LEOCourseBtnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOCourseBtnView.m; sourceTree = "<group>"; };
+		E413EBA61C534DB700CA1ED8 /* LEOShowGradeTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOShowGradeTableView.h; sourceTree = "<group>"; };
+		E413EBA71C534DB700CA1ED8 /* LEOShowGradeTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOShowGradeTableView.m; sourceTree = "<group>"; };
 		E41CF8741C520DCE00EB5342 /* LEOCoursePopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOCoursePopView.h; sourceTree = "<group>"; };
 		E41CF8751C520DCE00EB5342 /* LEOCoursePopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOCoursePopView.m; sourceTree = "<group>"; };
+		E453D3C71C53763800146F06 /* LEOShowCourseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOShowCourseTableView.h; sourceTree = "<group>"; };
+		E453D3C81C53763800146F06 /* LEOShowCourseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOShowCourseTableView.m; sourceTree = "<group>"; };
+		E453D3CB1C5394ED00146F06 /* LEOMyBuyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOMyBuyViewController.h; sourceTree = "<group>"; };
+		E453D3CC1C5394ED00146F06 /* LEOMyBuyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOMyBuyViewController.m; sourceTree = "<group>"; };
 		E47543EB1C50A0800051CE3C /* LEOCourseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOCourseController.h; sourceTree = "<group>"; };
 		E47543EC1C50A0800051CE3C /* LEOCourseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOCourseController.m; sourceTree = "<group>"; };
 		E47543F11C50AC000051CE3C /* LEOCourseHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOCourseHeaderView.h; sourceTree = "<group>"; };
@@ -340,6 +355,24 @@
 			name = Controlleres;
 			sourceTree = "<group>";
 		};
+		E41147401C54D0BA005F6EAA /* MainTableView */ = {
+			isa = PBXGroup;
+			children = (
+				E41147411C54D0E5005F6EAA /* LEOMainTableView.h */,
+				E41147421C54D0E5005F6EAA /* LEOMainTableView.m */,
+			);
+			name = MainTableView;
+			sourceTree = "<group>";
+		};
+		E453D3CA1C5394B300146F06 /* PopViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E453D3CB1C5394ED00146F06 /* LEOMyBuyViewController.h */,
+				E453D3CC1C5394ED00146F06 /* LEOMyBuyViewController.m */,
+			);
+			name = PopViewController;
+			sourceTree = "<group>";
+		};
 		E47543E41C508CBB0051CE3C /* 今日大课(TodayCourse) */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +390,7 @@
 				E47543EC1C50A0800051CE3C /* LEOCourseController.m */,
 				E47543F41C50C0CB0051CE3C /* LEOCourseNavController.h */,
 				E47543F51C50C0CB0051CE3C /* LEOCourseNavController.m */,
+				E453D3CA1C5394B300146F06 /* PopViewController */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -364,10 +398,9 @@
 		E47543E61C50A0110051CE3C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E47543F11C50AC000051CE3C /* LEOCourseHeaderView.h */,
-				E47543F21C50AC000051CE3C /* LEOCourseHeaderView.m */,
-				E41CF8741C520DCE00EB5342 /* LEOCoursePopView.h */,
-				E41CF8751C520DCE00EB5342 /* LEOCoursePopView.m */,
+				E41147401C54D0BA005F6EAA /* MainTableView */,
+				E4DE4B071C53A09900BC37B3 /* SelectedView */,
+				E4DE4B061C53A08300BC37B3 /* HeaderView */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -377,6 +410,30 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E4DE4B061C53A08300BC37B3 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				E47543F11C50AC000051CE3C /* LEOCourseHeaderView.h */,
+				E47543F21C50AC000051CE3C /* LEOCourseHeaderView.m */,
+				E41CF8741C520DCE00EB5342 /* LEOCoursePopView.h */,
+				E41CF8751C520DCE00EB5342 /* LEOCoursePopView.m */,
+			);
+			name = HeaderView;
+			sourceTree = "<group>";
+		};
+		E4DE4B071C53A09900BC37B3 /* SelectedView */ = {
+			isa = PBXGroup;
+			children = (
+				E413EBA31C53462000CA1ED8 /* LEOCourseBtnView.h */,
+				E413EBA41C53462000CA1ED8 /* LEOCourseBtnView.m */,
+				E413EBA61C534DB700CA1ED8 /* LEOShowGradeTableView.h */,
+				E413EBA71C534DB700CA1ED8 /* LEOShowGradeTableView.m */,
+				E453D3C71C53763800146F06 /* LEOShowCourseTableView.h */,
+				E453D3C81C53763800146F06 /* LEOShowCourseTableView.m */,
+			);
+			name = SelectedView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AC273D31C4BCD29009B73C5 /* LEOFriendsNavController.m in Sources */,
+				E41147431C54D0E5005F6EAA /* LEOMainTableView.m in Sources */,
 				4665B3CA1C4CB5C300BCF634 /* GDTextMainVController.m in Sources */,
 				4665B3D01C4D3EB300BCF634 /* GDQutionListTController.m in Sources */,
 				0A0A161B1C4BE76300B7158A /* LEOMeCellFrame.m in Sources */,
@@ -458,17 +516,21 @@
 				E47543F31C50AC000051CE3C /* LEOCourseHeaderView.m in Sources */,
 				0A0A167D1C4CB8CC00B7158A /* LEOMeHeadView.m in Sources */,
 				0A0A16DC1C4DFE2400B7158A /* LEOFindPasswordController.m in Sources */,
+				E453D3C91C53763800146F06 /* LEOShowCourseTableView.m in Sources */,
 				4665B3D41C4D400400BCF634 /* GDQuestionListTableViewCell.m in Sources */,
 				0A0A161E1C4BE77600B7158A /* LEOMeController.m in Sources */,
 				467521C91C4BEE6B00362E8A /* GDMainNController.m in Sources */,
 				3A92F3771C49470000328E36 /* AppDelegate.m in Sources */,
 				0A0A16D81C4DD75E00B7158A /* LEORegisterController.m in Sources */,
 				E47543F61C50C0CB0051CE3C /* LEOCourseNavController.m in Sources */,
+				E453D3CD1C5394ED00146F06 /* LEOMyBuyViewController.m in Sources */,
 				3A92F3741C49470000328E36 /* main.m in Sources */,
 				3A92F38E1C49478F00328E36 /* LEOMainTabBarController.m in Sources */,
 				E47543ED1C50A0800051CE3C /* LEOCourseController.m in Sources */,
 				0A0A15BA1C4BC18300B7158A /* LEOMe.m in Sources */,
 				3A9C01711C4FA7DE009433CE /* LEOFriendsViewController.m in Sources */,
+				E413EBA81C534DB700CA1ED8 /* LEOShowGradeTableView.m in Sources */,
+				E413EBA51C53462000CA1ED8 /* LEOCourseBtnView.m in Sources */,
 				0A0A16DF1C4DFFAF00B7158A /* LEONewUserController.m in Sources */,
 				E41CF8761C520DCE00EB5342 /* LEOCoursePopView.m in Sources */,
 				0A0A161A1C4BE76300B7158A /* LEOMeCell.m in Sources */,

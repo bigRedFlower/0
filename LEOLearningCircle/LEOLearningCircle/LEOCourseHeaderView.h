@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LEOCoursePopView;
 
 @interface LEOCourseHeaderView : UIView
+
+@property (nonatomic, weak) LEOCoursePopView *popView;
 
 @end

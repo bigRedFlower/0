@@ -7,6 +7,7 @@
 //
 
 #import "LEOCoursePopView.h"
+#import "LEOMyBuyViewController.h"
 
 @interface LEOCoursePopView ()
 
@@ -46,20 +47,10 @@
 
 
 - (void)clickOptionalBtn:(UIButton *)sender{
-    if ([sender.titleLabel.text isEqualToString:@"我的购买"]) {
-        // To push a new vc
-        NSLog(@"Buy");
-    }
-    if ([sender.titleLabel.text isEqualToString:@"我的收藏"]) {
-        // To push a new vc
-        NSLog(@"collection");
-    }
-    if ([sender.titleLabel.text isEqualToString:@"我的下载"]) {
-        // To push a new vc
-        NSLog(@"download");
-    }
+        LEOMyBuyViewController *vc = [[LEOMyBuyViewController alloc] init];
+        vc.navTitle = sender.titleLabel.text;
+        [self.vc.navigationController pushViewController:vc animated:YES];
 }
-
 
 - (void)layoutSubviews{
     [super layoutSubviews];
