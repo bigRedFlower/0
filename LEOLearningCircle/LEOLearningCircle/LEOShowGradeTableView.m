@@ -29,12 +29,9 @@
     self.delegate = self;
     self.dataSource = self;
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
-
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionMiddle];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showGradeTableView:) name:@"ShowGradeTableView11" object:nil];
-    NSLog(@"注册grade的通知监听者");
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showGradeTableView:) name:@"ShowGradeTableView11" object:nil];
+//    NSLog(@"注册grade的通知监听者");
     return self;
 }
 
@@ -63,12 +60,21 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     }
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
-    cell.textLabel.text = @"哈哈哈";
+    cell.textLabel.font = [UIFont systemFontOfSize:12];
+    cell.textLabel.text = @"年级";
 
     return cell;
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //to show the according tableview of the class
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.textLabel.textColor = [UIColor colorWithRed:44.0/255.0 green:182.0/255.0 blue:167.0/255.0 alpha:1.0];
+}
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.textLabel.textColor = [UIColor blackColor];
 }
 
 - (void)dealloc{

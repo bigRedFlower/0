@@ -30,9 +30,6 @@
     self.dataSource = self;
     self.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
-    
     return self;
 }
 
@@ -50,7 +47,7 @@
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.font = [UIFont systemFontOfSize:12];
-    cell.textLabel.text = @"呵呵呵";
+    cell.textLabel.text = @"课程";
     
     return cell;
 }
